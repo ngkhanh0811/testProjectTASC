@@ -1,0 +1,39 @@
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color:#fff;
+}
+
+table th {
+    background-color: #1c7ed6f2;
+    color: white;
+}
+
+
+#overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 99;
+    visibility: hidden;
+}
+
+.visibleOverlay{
+    visibility: visible !important;
+}
+
+#formCreate{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visibleForm{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: ease 0.1s;
+}
