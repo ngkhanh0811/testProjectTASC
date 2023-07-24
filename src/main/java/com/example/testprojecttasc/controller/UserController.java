@@ -52,15 +52,6 @@ public class UserController extends BaseController {
         return view;
     }
 
-    //Get details of user
-    @GetMapping(value = "user")
-    public ModelAndView getDetails(@RequestParam Long id, HttpServletRequest request){
-        ModelAndView view = new ModelAndView("pages/details.jsp");
-        UserDto userDto = service.getById(id);
-        view.addObject("user", userDto);
-        return view;
-    }
-
     //Update user
     @GetMapping(value = "users/update")
     public UserDto updateUser(@RequestParam Long id, HttpServletRequest request){
@@ -78,16 +69,6 @@ public class UserController extends BaseController {
             return "redirect:/users";
         }
     }
-
-
-    //Get create form
-//    @GetMapping(value = "users/create")
-//    public ModelAndView getCreateView(HttpServletRequest request){
-//        UserDto userDto = new UserDto();
-//        ModelAndView view = new ModelAndView("pages/createForm.jsp");
-//        view.addObject("userCreate", userDto);
-//        return view;
-//    }
 
     //Post data from create form
     @PostMapping(value = "users/create")
